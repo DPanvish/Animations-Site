@@ -1,8 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 
 export default {
-  purge: ['./index.html', './src/**/*.{js,jsx}'],
-  darkMode: false,
+  content: ['./index.html', './src/**/*.{js,jsx}'],
   theme: {
     extend: {
         fontFamily:{
@@ -10,11 +9,25 @@ export default {
             general: ['general', 'sans-serif'],
             'circular-web': ['circular-web', 'sans-serif'],
             'robert-medium': ['robert-medium', 'sans-serif'],
-            'roboto-regular': ['roboto-regular', 'sans-serif'],
+            'roboto-regular': ['robert-regular', 'sans-serif'],
         },
-        colors: {}
+        colors: {
+            blue: {
+                50: '#DFDFF0',
+                75: '#DFDFF2',
+                100: '#F0F2FA',
+                200: '#010101',
+                300: '#4FB7DD',
+            },
+            violet: {
+                300: '#5724FF',
+            },
+            yellow: {
+                100: '#8E983F',
+                300: '#EDFF66',
+            }
+        }
     },
   },
-  variants: {},
   plugins: [],
 }
