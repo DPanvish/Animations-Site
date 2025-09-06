@@ -75,7 +75,7 @@ const Hero = () => {
               Enter the Metagame Layer <br /> Unleash the Play Economy
             </p>
 
-            <Button />
+            <Button id="watch-trailer" title="Watch Trailer"/>
           </div>
         </div>
       </div>
