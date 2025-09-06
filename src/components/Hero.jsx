@@ -60,13 +60,19 @@ const Hero = () => {
           />
         </div>
 
-        <h1 className="absolute z-40 special-font hero-heading bottom-5 right-5 text-blue-75">G<b>a</b>ming</h1>
+        <h1 className="absolute z-40 special-font hero-heading bottom-5 right-5 text-blue-75">
+          G<b>a</b>ming
+        </h1>
 
         <div className="absolute top-0 left-0 z-40 size-full">
           <div className="px-5 mt-24 sm:10">
-            <h1 className="text-blue-100 special-font hero-heading">redefi<b>n</b>E</h1>
+            <h1 className="text-blue-100 special-font hero-heading">
+              redefi<b>n</b>E
+            </h1>
 
-            <p className="mb-5 text-blue-100 max-w-64 font-roboto-regular">Enter the Metagame Layer <br /> Unleash the Play Economy</p>
+            <p className="mb-5 text-blue-100 max-w-64 font-robert-regular">
+              Enter the Metagame Layer <br /> Unleash the Play Economy
+            </p>
           </div>
         </div>
       </div>
