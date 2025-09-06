@@ -1,4 +1,5 @@
 import React, { useRef, useState } from 'react'
+import Button from './Button';
 
 const Hero = () => {
 
@@ -73,6 +74,8 @@ const Hero = () => {
             <p className="mb-5 text-blue-100 max-w-64 font-robert-regular">
               Enter the Metagame Layer <br /> Unleash the Play Economy
             </p>
+
+            <Button />
           </div>
         </div>
       </div>
