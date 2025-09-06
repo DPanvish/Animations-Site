@@ -1,4 +1,5 @@
 1) Install the Vite application npm vite@latest ./
 2) Install node modules npm install
 3) Install tailwind css with vite "https://v3.tailwindcss.com/docs/guides/vite"
-3) Install React Icons npm install react-icons --save
+4) Install React Icons npm install react-icons --save
+5) Install GSAP npm install @gsap/react gsap
