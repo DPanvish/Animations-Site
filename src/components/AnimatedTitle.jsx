@@ -6,6 +6,8 @@ const AnimatedTitle = ({title, containerClass}) => {
     const containerRef = useRef(null);
 
     useEffect(() => {
+
+        // Create a GSAP context to manage animations within the component
         const ctx = gsap.context(() => {
             const titleAnimation = gsap.timeline({
                 scrollTrigger:{
