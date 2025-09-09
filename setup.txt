@@ -3,3 +3,4 @@
 3) Install tailwind css with vite "https://v3.tailwindcss.com/docs/guides/vite"
 4) Install React Icons npm install react-icons --save
 5) Install GSAP npm install @gsap/react gsap
+6) Install React use library npm i react-use
