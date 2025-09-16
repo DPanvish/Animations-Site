@@ -1,3 +1,4 @@
+// eslint.config.js — Basic JS/React rules with some sensible defaults
 import js from '@eslint/js'
 import globals from 'globals'
 import reactHooks from 'eslint-plugin-react-hooks'

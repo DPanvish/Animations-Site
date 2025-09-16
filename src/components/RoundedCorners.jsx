@@ -1,7 +1,7 @@
+// RoundedCorners.jsx — SVG filter used for soft, rounded image corners
 import React from 'react'
 
 // This is taken from internet
-
 const RoundedCorners = () => {
   return (
     <svg

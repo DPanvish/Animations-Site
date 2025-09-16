@@ -1,44 +1,45 @@
+// AnimatedTitle.jsx — Fades/rotates words into view on scroll
 import React, { useEffect, useRef } from 'react'
 import gsap from 'gsap';
 
 const AnimatedTitle = ({title, containerClass}) => {
+  const containerRef = useRef(null);
 
-    const containerRef = useRef(null);
+  useEffect(() => {
+    // Create a GSAP context bound to this component
+    const ctx = gsap.context(() => {
+      const titleAnimation = gsap.timeline({
+        scrollTrigger:{
+          trigger: containerRef.current,
+          start: "100 bottom",
+          end: "center bottom",
+          toggleActions: "play none none reverse"
+        }
+      });
 
-    useEffect(() => {
+      // Animate each word
+      titleAnimation.to(".animated-word", {
+        opacity: 1,
+        transform: "translate3d(0, 0, 0) rotateY(0deg) rotateX(0deg)",
+        ease: "power2.inOut",
+        stagger: 0.02
+      })
+    }, containerRef)
 
-        // Create a GSAP context to manage animations within the component
-        const ctx = gsap.context(() => {
-            const titleAnimation = gsap.timeline({
-                scrollTrigger:{
-                    trigger: containerRef.current,
-                    start: "100 bottom",
-                    end: "center bottom",
-                    toggleActions: "play none none reverse"
-                }
-            });
-
-            titleAnimation.to(".animated-word", {
-                opacity: 1,
-                transform: "translate3d(0, 0, 0) rotateY(0deg) rotateX(0deg)",
-                ease: "power2.inOut",
-                stagger: 0.02
-            })
-        }, containerRef)
-
-        return () => ctx.revert();
-    }, [])
+    return () => ctx.revert();
+  }, [])
 
   return (
-        <div className={`animated-title ${containerClass}`} ref={containerRef}>
-            {title.split('<br />').map((line, index) => (
-                <div key={index} className="flex-wrap max-w-full gap-2 px-10 flex-center md:gap-3">
-                    {line.split(" ").map((word, i) => (
-                        <span key={i} className="animated-word" dangerouslySetInnerHTML={{__html: word}} />
-                    ))}
-                </div>
-            ))}
+    <div className={`animated-title ${containerClass}`} ref={containerRef}>
+      {title.split('<br />').map((line, index) => (
+        <div key={index} className="flex-wrap max-w-full gap-2 px-10 flex-center md:gap-3">
+          {line.split(" ").map((word, i) => (
+            // Render each word as HTML (supports <b> tags)
+            <span key={i} className="animated-word" dangerouslySetInnerHTML={{__html: word}} />
+          ))}
         </div>
+      ))}
+    </div>
   )
 }
 

@@ -1,10 +1,11 @@
+// BentoTilt.jsx — Adds a slight 3D tilt effect to its children
 import React, { useRef, useState } from 'react'
 
 const BentoTilt = ({children, className=""}) => {
   const [transformStyle, setTransformStyle] = useState("");
-
   const itemRef = useRef();
 
+  // Update transform based on mouse position
   const handleMouseMove = (e) => {
     if(!itemRef.current){
       return;
@@ -23,6 +24,7 @@ const BentoTilt = ({children, className=""}) => {
     setTransformStyle(newTransform);
   }
 
+  // Reset on leave
   const handleMouseLeave = () => {
     setTransformStyle("");
   }

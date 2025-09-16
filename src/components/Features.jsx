@@ -1,3 +1,4 @@
+// Features.jsx — Bento grid with videos and simple cards
 import React from 'react'
 import BentoCard from './BentoCard'
 import BentoTilt from './BentoTilt'
@@ -7,6 +8,7 @@ const Features = () => {
   return (
     <section className="bg-black pb-52">
       <div className="container px-3 mx-auto md:px-10">
+        {/* Header text */}
         <div className="px-5 py-32">
           <p className="text-lg font-circular-web text-blue-50">
             Into the Metagame Layer
@@ -19,6 +21,7 @@ const Features = () => {
           </p>
         </div>
 
+        {/* Main wide card */}
         <BentoTilt className="border-hsla relative mb-7 h-96 w-full overflow-hidden rounded-md md:h-[65vh]">
           <BentoCard
             src="videos/feature-1.mp4"
@@ -27,6 +30,7 @@ const Features = () => {
           />
         </BentoTilt>
 
+        {/* Grid of smaller cards */}
         <div className="grid h-[185vh] w-full grid-cols-2 grids-rows-3 gap-7">
           <BentoTilt className="row-span-1 bento-tilt_1 md:col-span-1 md:row-span-2">
             <BentoCard 

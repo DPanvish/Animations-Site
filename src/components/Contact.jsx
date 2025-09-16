@@ -1,6 +1,8 @@
+// Contact.jsx — Simple CTA block with clipped images
 import React from 'react'
 import Button from './Button'
 
+// Small helper to render an image inside a clip-path container
 const ImageClipBox = ({src, clipClass}) => (
   <div className={clipClass}>
     <img src={src} />
@@ -11,6 +13,7 @@ const Contact = () => {
   return (
     <section id="contact" className="w-screen px-10 my-20 min-h-96">
       <div className="relative py-24 bg-black rounded-lg text-blue-50 sm:overflow-hidden">
+        {/* Decorative clipped images */}
         <div className="absolute top-0 hidden h-full overflow-hidden -left-20 w-72 sm:block lg:left-20 lg-w-96">
           <ImageClipBox
             src="img/contact-1.webp"
@@ -35,6 +38,7 @@ const Contact = () => {
           />
         </div>
 
+        {/* Content */}
         <div className="flex flex-col items-center text-center">
           <p className="font-general text-[10px] uppercase">Join Zentry</p>
 
